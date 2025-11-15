@@ -157,7 +157,8 @@ export default function Index() {
             {events.map((event) => (
               <div
                 key={event.id}
-                className="group bg-jugs-card-bg border border-jugs-red rounded-[23px] p-6 flex flex-col gap-6 hover:border-red-400 transition-all duration-300 hover:shadow-lg hover:shadow-jugs-red/20 overflow-hidden"
+                className="group bg-jugs-card-bg border border-jugs-red rounded-[23px] p-6 flex flex-col gap-6 overflow-hidden
+                          transition-all duration-300 transform hover:scale-[1.02] hover:border-jugs-red/70 hover:shadow-[0_8px_30px_rgba(220, 38, 38, 0.2)]"
               >
                 <div className="relative overflow-hidden rounded-[23px]">
                   <img

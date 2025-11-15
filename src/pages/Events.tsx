@@ -55,7 +55,8 @@ export default function Events() {
           {events.map((event) => (
             <div
               key={event.id}
-              className="bg-[#191919] border border-white rounded-3xl p-6 lg:p-12 flex flex-col md:flex-row gap-6 hover:border-gray-300 transition-colors"
+              className="bg-[#191919] border border-white rounded-3xl p-6 lg:p-12 flex flex-col md:flex-row gap-6 
+                        transition-all duration-300 transform hover:scale-[1.02] hover:border-jugs-red/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
             >
               <div className="flex-shrink-0">
                 <img
