@@ -1,62 +1,44 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import juclPoster from "@/assets/events/juclPoster.jpg";
+import valoPoster from "@/assets/events/valoPoster.png";
+import bgmiPoster from "@/assets/events/bgmiPoster.png";
+import eafcPoster from "@/assets/events/eafcPoster.png";
 
 export default function Events() {
   const events = [
     {
       id: 1,
-      title: "Tech Cradels",
-      date: "March 11, 2023 - March 13,2023",
+      title: "JUCL Season 3",
+      date: "August 2025",
       description:
-        "Jadhavpur Gaming Society (JUGS) is your home for pixels, passion, and competitive spirit. We are a thriving community of students united by a love for all platforms—from PC and console titans",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/dfaafb9b0257b2d9633b9c20af3d9c56497cdd88?width=336",
+        "Jadavpur University Community League (JUCL) is an annual event organized by JUGS for students to showcase their gaming skills and compete in games such as Valorant, BGMI, eFootball.",
+      image: juclPoster,
     },
     {
       id: 2,
-      title: "Tech Cradels",
-      date: "March 11, 2023 - March 13,2023",
+      title: "NSG UEC x Valorant",
+      date: "April 2025",
       description:
-        "Jadhavpur Gaming Society (JUGS) is your home for pixels, passion, and competitive spirit. We are a thriving community of students united by a love for all platforms—from PC and console titans",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/dfaafb9b0257b2d9633b9c20af3d9c56497cdd88?width=336",
+        "In partnership with NSG UEC, an eSport Valorant event whose winners get a chance to represent their university in the national level.",
+      image: valoPoster,
     },
     {
       id: 3,
-      title: "Tech Cradels",
-      date: "March 11, 2023 - March 13,2023",
+      title: "NSG UEC x BGMI",
+      date: "April 2025",
       description:
-        "Jadhavpur Gaming Society (JUGS) is your home for pixels, passion, and competitive spirit. We are a thriving community of students united by a love for all platforms—from PC and console titans",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/dfaafb9b0257b2d9633b9c20af3d9c56497cdd88?width=336",
+        "In partnership with NSG UEC, an eSport BGMI event whose winners get a chance to represent their university in the national level.",
+      image: bgmiPoster,
     },
     {
       id: 4,
-      title: "Tech Cradels",
-      date: "March 11, 2023 - March 13,2023",
+      title: "NSG UEC x eFootball",
+      date: "April 2025",
       description:
-        "Jadhavpur Gaming Society (JUGS) is your home for pixels, passion, and competitive spirit. We are a thriving community of students united by a love for all platforms—from PC and console titans",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/dfaafb9b0257b2d9633b9c20af3d9c56497cdd88?width=336",
-    },
-    {
-      id: 5,
-      title: "Tech Cradels",
-      date: "March 11, 2023 - March 13,2023",
-      description:
-        "Jadhavpur Gaming Society (JUGS) is your home for pixels, passion, and competitive spirit. We are a thriving community of students united by a love for all platforms—from PC and console titans",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/dfaafb9b0257b2d9633b9c20af3d9c56497cdd88?width=336",
-    },
-    {
-      id: 6,
-      title: "Tech Cradels",
-      date: "March 11, 2023 - March 13,2023",
-      description:
-        "Jadhavpur Gaming Society (JUGS) is your home for pixels, passion, and competitive spirit. We are a thriving community of students united by a love for all platforms—from PC and console titans",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/dfaafb9b0257b2d9633b9c20af3d9c56497cdd88?width=336",
-    },
+        "In partnership with NSG UEC, an eSport eFootball event whose winners get a chance to represent their university in the national level.",
+      image: eafcPoster,
+    }
   ];
 
   return (
@@ -95,13 +77,6 @@ export default function Events() {
                     {event.description}
                   </p>
                 </div>
-
-                <a
-                  href="#"
-                  className="text-sm lg:text-base font-bold text-jugs-red hover:underline mt-4 inline-block"
-                >
-                  Learn More
-                </a>
               </div>
             </div>
           ))}
