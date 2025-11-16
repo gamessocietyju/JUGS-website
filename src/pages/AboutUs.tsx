@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import image1 from '@/assets/about/valo.jpg';
 import image2 from '@/assets/about/racing.jpg';
 import image3 from '@/assets/about/bgmi.jpg';
-import image4 from '@/assets/about/eafc.jpg';
+import image4 from '@/assets/about/ps5.jpg';
 
 export default function AboutUs() {
   return (
