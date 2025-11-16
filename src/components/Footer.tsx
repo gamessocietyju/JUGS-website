@@ -61,7 +61,7 @@ function Footer() {
                 href="mailto:gamessocietyju@gmail.com"
                 className="flex items-center gap-2 text-lg lg:text-2xl font-medium hover:text-jugs-red transition-colors"
               >
-                <Mail className="w-6 h-6 flex-shrink-0" />
+                <Mail className="w-5 h-5 flex-shrink-0" />
                 gamessocietyju@gmail.com
               </a>
             </div>
