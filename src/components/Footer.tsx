@@ -59,7 +59,7 @@ function Footer() {
             <div className="space-y-2 lg:space-y-4">
               <a
                 href="mailto:gamessocietyju@gmail.com"
-                className="flex items-center gap-2 text-lg lg:text-2xl font-medium hover:text-jugs-red transition-colors"
+                className="flex items-center gap-2 text-lg lg:text-xl font-medium hover:text-jugs-red transition-colors"
               >
                 <Mail className="w-5 h-5 flex-shrink-0" />
                 gamessocietyju@gmail.com
