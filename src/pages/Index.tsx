@@ -1,12 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import image1 from '@/assets/home/image1.png';
-import image2 from '@/assets/home/image2.png';
-import image3 from '@/assets/home/image3.png';
+import image1 from '@/assets/home/home1.png';
+import image2 from '@/assets/home/home2.png';
+import image3 from '@/assets/home/home3.png';
 import juclPoster from '@/assets/home/juclPoster.jpg';
-import valoPoster from '@/assets/home/valo.png';
-import bgmiPoster from '@/assets/home/bgmi.png';
+import valoPoster from '@/assets/home/valoPoster.png';
+import bgmiPoster from '@/assets/home/bgmiPoster.png';
 
 export default function Index() {
   const events = [
