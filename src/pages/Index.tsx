@@ -75,7 +75,7 @@ export default function Index() {
                 <div className="w-1 h-auto bg-jugs-red rounded-full flex-shrink-0"></div>
                 <div className="pl-4">
                   <p className="text-sm lg:text-base leading-relaxed lg:leading-[30px] font-semibold max-w-2xl">
-                    Jadavpur University Gaming Society (JUGS) is your home for
+                    Jadavpur University Games Society (JUGS) is your home for
                     pixels, passion, and competitive spirit. We are a thriving
                     community of students united by a love for all platforms—from
                     PC and console titans to intricate tabletop games. Join us to
