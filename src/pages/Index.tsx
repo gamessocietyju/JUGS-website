@@ -5,8 +5,8 @@ import image1 from '@/assets/home/image1.png';
 import image2 from '@/assets/home/image2.png';
 import image3 from '@/assets/home/image3.png';
 import juclPoster from '@/assets/home/juclPoster.jpg';
-import valoPoster from '@/assets/home/Valo.png';
-import bgmiPoster from '@/assets/home/BGMI.png';
+import valoPoster from '@/assets/home/valo.png';
+import bgmiPoster from '@/assets/home/bgmi.png';
 
 export default function Index() {
   const events = [
