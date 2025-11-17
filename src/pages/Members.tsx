@@ -19,6 +19,7 @@ import contentMember2 from '@/assets/members/rahul.jpg'
 import contentMember3 from '@/assets/members/sanglap.jpg'
 import contentMember4 from '@/assets/members/ayantika.jpg'
 import contentMember5 from '@/assets/members/imran.jpg'
+import contentMember6 from '@/assets/members/rudranil.jpg'
 
 import operationsHead from '@/assets/members/priyabrata.jpg'
 import logisticsHead from '@/assets/members/mayukh.jpg'
@@ -34,6 +35,9 @@ import appointmentMember1 from '@/assets/members/ranit2.jpg'
 import appointmentMember2 from '@/assets/members/souparna.jpg'
 import appointmentMember3 from '@/assets/members/nirjhar.jpg'
 import appointmentMember4 from '@/assets/members/krish.jpg'
+
+import techHead from '@/assets/members/default.jpg'
+import techMember1 from '@/assets/members/sauhardya.jpg'
 
 interface TeamMember {
   id: number;
@@ -143,6 +147,12 @@ export default function Members() {
       role: "Member",
       image: contentMember5,
     },
+    {
+      id: 7,
+      name: "Rudranil Mondal",
+      role: "Member",
+      image: contentMember6,
+    },
   ];
 
   const operationsTeam: TeamMember[] = [
@@ -226,6 +236,21 @@ export default function Members() {
       name: "Krish Agarwal",
       role: "Member",
       image: appointmentMember4,
+    },
+  ];
+
+  const techTeam: TeamMember[] = [
+    {
+      id: 1,
+      name: "Md Farshid Hossain",
+      role: "Tech Head",
+      image: techHead,
+    },
+    {
+      id: 2,
+      name: "Sauhardya Hazra",
+      role: "Member",
+      image: techMember1,
     },
   ];
 
@@ -330,6 +355,22 @@ export default function Members() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {appointmentTeam.map((member) => (
+              <MemberCard key={member.id} member={member} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16 lg:mb-24">
+          <div className="flex items-center gap-4 mb-8 lg:mb-12">
+            <div className="w-1 h-12 bg-white rounded-full"></div>
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
+              <span className="text-jugs-red">Tech</span>
+              <span className="text-white"> Team</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {techTeam.map((member) => (
               <MemberCard key={member.id} member={member} />
             ))}
           </div>
