@@ -13,6 +13,7 @@ import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Members from "./pages/Members";
 import NotFound from "./pages/NotFound";
+import InteractionProvider from "@/components/interactions/InteractionProvider";
 
 const queryClient = new QueryClient();
 
@@ -39,7 +40,9 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <BrowserRouter>
-        <AppContent />
+        <InteractionProvider>
+          <AppContent />
+        </InteractionProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

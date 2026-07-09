@@ -1,9 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 import juclPoster from "@/assets/events/juclPoster.jpg";
 import valoPoster from "@/assets/events/valoPoster.png";
 import bgmiPoster from "@/assets/events/bgmiPoster.png";
 import eafcPoster from "@/assets/events/eafcPoster.png";
+import TiltCard from "@/components/interactions/TiltCard";
 
 export default function Events() {
   const events = [
@@ -42,44 +44,54 @@ export default function Events() {
   ];
 
   return (
-    <div className="min-h-screen bg-jugs-dark">
+    <div className="min-h-screen bg-jugs-dark text-white selection:bg-jugs-primary selection:text-white">
       <Navigation />
 
-      <main className="px-8 lg:px-[164px] py-12 lg:py-24">
-        <h1 className="text-4xl lg:text-5xl xl:text-[67px] font-semibold leading-tight lg:leading-[84px] mb-12 lg:mb-16">
-          <span className="text-jugs-red">Events</span>
+      <main className="px-6 md:px-12 lg:px-20 py-16 lg:py-28 max-w-7xl mx-auto">
+        <motion.h1 
+          initial={{ opacity: 0, y: -25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl lg:text-5xl font-black uppercase tracking-wider leading-tight mb-12"
+        >
+          <span className="text-gradient-accent">Events</span>
           <span className="text-white"> round the calender</span>
-        </h1>
+        </motion.h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-12 lg:gap-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {events.map((event) => (
-            <div
+            <motion.div
               key={event.id}
-              className="bg-[#191919] border border-white rounded-3xl p-6 lg:p-12 flex flex-col md:flex-row gap-6 
-                        transition-all duration-300 transform hover:scale-[1.02] hover:border-jugs-red/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: event.id * 0.1 }}
+              className="flex flex-col h-full"
             >
-              <div className="flex-shrink-0">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full md:w-[168px] h-[202px] object-cover rounded-3xl"
-                />
-              </div>
-
-              <div className="flex flex-col justify-between flex-1">
-                <div>
-                  <h2 className="text-xl lg:text-2xl font-bold text-white mb-2">
-                    {event.title}
-                  </h2>
-                  <p className="text-sm lg:text-base font-bold text-jugs-red leading-[30px] mb-4">
-                    {event.date}
-                  </p>
-                  <p className="text-sm font-semibold text-white leading-[30px]">
-                    {event.description}
-                  </p>
+              <TiltCard className="card-premium group flex flex-col md:flex-row gap-8 p-6 lg:p-8 border-white/10 hover:border-jugs-secondary/35 h-full cursor-pointer">
+                <div className="flex-shrink-0 w-full md:w-[168px] h-[202px] rounded-2xl overflow-hidden bg-[#070B12]">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover rounded-2xl transform group-hover:scale-105 group-hover:brightness-110 border border-transparent group-hover:border-jugs-secondary/20 transition-all duration-500"
+                  />
                 </div>
-              </div>
-            </div>
+
+                <div className="flex flex-col justify-between flex-1">
+                  <div>
+                    <h2 className="text-xl lg:text-2xl font-bold font-orbitron tracking-wide text-white group-hover:text-jugs-secondary transition-colors duration-300 mb-2">
+                      {event.title}
+                    </h2>
+                    <div className="inline-block self-start font-orbitron text-xs font-bold text-jugs-secondary tracking-widest bg-jugs-secondary/10 border border-jugs-secondary/20 px-3.5 py-1 rounded-full mb-4">
+                      {event.date}
+                    </div>
+                    <p className="text-sm font-medium leading-relaxed text-white/70">
+                      {event.description}
+                    </p>
+                  </div>
+                </div>
+              </TiltCard>
+            </motion.div>
           ))}
         </div>
       </main>
@@ -88,3 +100,4 @@ export default function Events() {
     </div>
   );
 }
+

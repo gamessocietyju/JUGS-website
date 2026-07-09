@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 import chairperson from '@/assets/members/sumit.jpg';
 import viceChairperson from '@/assets/members/sunandan.jpg';
 import secretary from '@/assets/members/touseef.jpg';
@@ -38,6 +39,7 @@ import appointmentMember4 from '@/assets/members/krish.jpg'
 
 import techHead from '@/assets/members/default.jpg'
 import techMember1 from '@/assets/members/sauhardya.jpg'
+import TiltCard from "@/components/interactions/TiltCard";
 
 interface TeamMember {
   id: number;
@@ -255,20 +257,26 @@ export default function Members() {
   ];
 
   return (
-    <div className="min-h-screen bg-jugs-dark">
+    <div className="min-h-screen bg-jugs-dark text-white selection:bg-jugs-primary selection:text-white">
       <Navigation />
 
-      <main className="px-8 lg:px-[120px] py-12 lg:py-24">
-        <h1 className="text-4xl lg:text-5xl xl:text-[67px] font-semibold leading-tight lg:leading-[84px] mb-16 lg:mb-20">
+      <main className="px-6 md:px-12 lg:px-20 py-16 lg:py-28 max-w-7xl mx-auto">
+        <motion.h1 
+          initial={{ opacity: 0, y: -25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl lg:text-5xl font-black uppercase tracking-wider leading-tight mb-16 lg:mb-20"
+        >
           <span className="text-white">Meet the </span>
-          <span className="text-jugs-red">Team</span>
-        </h1>
+          <span className="text-gradient-accent">Team</span>
+        </motion.h1>
 
-        <section className="mb-16 lg:mb-24">
-          <div className="flex items-center gap-4 mb-8 lg:mb-12">
-            <div className="w-1 h-12 bg-white rounded-full"></div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
-              <span className="text-jugs-red">Core </span>
+        {/* Core Team */}
+        <section className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-4 mb-8 lg:mb-10">
+            <div className="w-[3px] h-10 bg-jugs-primary rounded-full shadow-[0_0_8px_#5B5FFF]"></div>
+            <h2 className="text-xl lg:text-2xl font-black uppercase tracking-wider">
+              <span className="text-gradient-primary">Core </span>
               <span className="text-white"> Team</span>
             </h2>
           </div>
@@ -280,11 +288,12 @@ export default function Members() {
           </div>
         </section>
 
-        <section className="mb-16 lg:mb-24">
-          <div className="flex items-center gap-4 mb-8 lg:mb-12">
-            <div className="w-1 h-12 bg-white rounded-full"></div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
-              <span className="text-jugs-red">PR & Marketing</span>
+        {/* PR Team */}
+        <section className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-4 mb-8 lg:mb-10">
+            <div className="w-[3px] h-10 bg-jugs-accent rounded-full shadow-[0_0_8px_#FF3366]"></div>
+            <h2 className="text-xl lg:text-2xl font-black uppercase tracking-wider">
+              <span className="text-gradient-accent">PR & Marketing</span>
               <span className="text-white"> Team</span>
             </h2>
           </div>
@@ -296,11 +305,12 @@ export default function Members() {
           </div>
         </section>
 
-        <section className="mb-16 lg:mb-24">
-          <div className="flex items-center gap-4 mb-8 lg:mb-12">
-            <div className="w-1 h-12 bg-white rounded-full"></div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
-              <span className="text-jugs-red">Design</span>
+        {/* Design Team */}
+        <section className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-4 mb-8 lg:mb-10">
+            <div className="w-[3px] h-10 bg-jugs-primary rounded-full shadow-[0_0_8px_#5B5FFF]"></div>
+            <h2 className="text-xl lg:text-2xl font-black uppercase tracking-wider">
+              <span className="text-gradient-primary">Design</span>
               <span className="text-white"> Team</span>
             </h2>
           </div>
@@ -312,11 +322,12 @@ export default function Members() {
           </div>
         </section>
 
-        <section className="mb-16 lg:mb-24">
-          <div className="flex items-center gap-4 mb-8 lg:mb-12">
-            <div className="w-1 h-12 bg-white rounded-full"></div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
-              <span className="text-jugs-red">Content</span>
+        {/* Content Team */}
+        <section className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-4 mb-8 lg:mb-10">
+            <div className="w-[3px] h-10 bg-jugs-accent rounded-full shadow-[0_0_8px_#FF3366]"></div>
+            <h2 className="text-xl lg:text-2xl font-black uppercase tracking-wider">
+              <span className="text-gradient-accent">Content</span>
               <span className="text-white"> Team</span>
             </h2>
           </div>
@@ -328,11 +339,12 @@ export default function Members() {
           </div>
         </section>
 
-        <section className="mb-16 lg:mb-24">
-          <div className="flex items-center gap-4 mb-8 lg:mb-12">
-            <div className="w-1 h-12 bg-white rounded-full"></div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
-              <span className="text-jugs-red">Operations & Logistics</span>
+        {/* Operations Team */}
+        <section className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-4 mb-8 lg:mb-10">
+            <div className="w-[3px] h-10 bg-jugs-primary rounded-full shadow-[0_0_8px_#5B5FFF]"></div>
+            <h2 className="text-xl lg:text-2xl font-black uppercase tracking-wider">
+              <span className="text-gradient-primary">Operations & Logistics</span>
               <span className="text-white"> Team</span>
             </h2>
           </div>
@@ -344,11 +356,12 @@ export default function Members() {
           </div>
         </section>
 
-        <section className="mb-16 lg:mb-24">
-          <div className="flex items-center gap-4 mb-8 lg:mb-12">
-            <div className="w-1 h-12 bg-white rounded-full"></div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
-              <span className="text-jugs-red">Appointment</span>
+        {/* Appointment Team */}
+        <section className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-4 mb-8 lg:mb-10">
+            <div className="w-[3px] h-10 bg-jugs-accent rounded-full shadow-[0_0_8px_#FF3366]"></div>
+            <h2 className="text-xl lg:text-2xl font-black uppercase tracking-wider">
+              <span className="text-gradient-accent">Appointment</span>
               <span className="text-white"> Team</span>
             </h2>
           </div>
@@ -360,11 +373,12 @@ export default function Members() {
           </div>
         </section>
 
-        <section className="mb-16 lg:mb-24">
-          <div className="flex items-center gap-4 mb-8 lg:mb-12">
-            <div className="w-1 h-12 bg-white rounded-full"></div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
-              <span className="text-jugs-red">Tech</span>
+        {/* Tech Team */}
+        <section className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-4 mb-8 lg:mb-10">
+            <div className="w-[3px] h-10 bg-jugs-primary rounded-full shadow-[0_0_8px_#5B5FFF]"></div>
+            <h2 className="text-xl lg:text-2xl font-black uppercase tracking-wider">
+              <span className="text-gradient-primary">Tech</span>
               <span className="text-white"> Team</span>
             </h2>
           </div>
@@ -384,27 +398,37 @@ export default function Members() {
 
 function MemberCard({ member }: { member: TeamMember }) {
   return (
-    <div className="bg-[#191919] border border-white rounded-3xl p-4 lg:p-6 flex flex-col items-center gap-4 hover:border-jugs-red/70 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(220,38,38,0.2)]">
-      <div className="w-28 h-28 lg:w-[114px] lg:h-[114px] rounded-full bg-white flex-shrink-0 overflow-hidden">
-        {member.image ? (
-          <img
-            src={member.image}
-            alt={member.name}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="w-full h-full bg-gray-600"></div>
-        )}
-      </div>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="w-full flex"
+    >
+      <TiltCard className="w-full bg-[#171B24]/50 backdrop-blur-md border border-white/5 rounded-2xl p-6 flex flex-col items-center gap-4 hover:border-jugs-primary/40 cursor-pointer">
+        <div className="w-[110px] h-[110px] rounded-full p-[3px] bg-gradient-to-tr from-jugs-primary/20 via-white/5 to-jugs-secondary/30 flex-shrink-0 overflow-hidden relative shadow-[0_0_15px_rgba(0,212,255,0.1)]">
+          <div className="w-full h-full rounded-full overflow-hidden bg-[#070B12]">
+            {member.image ? (
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover transition-all duration-500 hover:scale-110 hover:brightness-110"
+              />
+            ) : (
+              <div className="w-full h-full bg-jugs-surface"></div>
+            )}
+          </div>
+        </div>
 
-      <div className="flex flex-col items-center gap-2 w-full">
-        <h3 className="text-xl lg:text-2xl font-semibold text-white text-center">
-          {member.name}
-        </h3>
-        <p className="text-lg lg:text-xl font-semibold text-jugs-red text-center">
-          {member.role}
-        </p>
-      </div>
-    </div>
+        <div className="flex flex-col items-center gap-1 w-full mt-2">
+          <h3 className="text-lg lg:text-xl font-bold font-orbitron tracking-wide text-white text-center">
+            {member.name}
+          </h3>
+          <p className="text-sm font-semibold text-jugs-secondary font-orbitron tracking-wider text-center uppercase">
+            {member.role}
+          </p>
+        </div>
+      </TiltCard>
+    </motion.div>
   );
 }
